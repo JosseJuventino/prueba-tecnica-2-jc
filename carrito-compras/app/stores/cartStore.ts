@@ -8,6 +8,7 @@ type CartState = {
   removeProduct: (productId: number) => void;
   addQuantityToProduct: (productId: number) => void;
   removeQuantityToProduct: (productId: number) => void;
+  cleanCart: () => void;
 };
 
 export const useCartStore = create<CartState>()(
@@ -16,6 +17,9 @@ export const useCartStore = create<CartState>()(
       products: [],
       addProduct: (product) => {
         set((state) => ({ products: [...state.products, product] }));
+      },
+      cleanCart: () => {
+        set({ products: [] });
       },
       removeProduct: (productId: number) => {
         set((state) => ({
@@ -45,6 +49,7 @@ export const useCartStore = create<CartState>()(
         }));
       },
     }),
+
     {
       name: "cart-storage",
       storage: createJSONStorage(() => localStorage),
