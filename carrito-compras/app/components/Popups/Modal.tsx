@@ -48,7 +48,7 @@ export const Modal = ({
           <div className="flex justify-between items-center p-6">
             <h3 className="text-2xl text-green-700 font-semibold">{title}</h3>
             <button
-              onClick={() => onClose()}
+              onClick={() => onClose}
               className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors duration-200"
               aria-label="Cerrar modal"
             >

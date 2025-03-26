@@ -40,7 +40,11 @@ export const HistoryPopup = ({
       <main className="space-y-4 px-6">
         {productos.map((product: Product) => (
           <div key={product.id} className="flex justify-between">
-            <p>{product.title}</p>
+            {product.title.length > 20 ? (
+              <p>{product.title.slice(0, 20)}...</p>
+            ) : (
+              <p>{product.title}</p>
+            )}
             <p>{product.price}</p>
             <p>{product.quantity}</p>
           </div>
