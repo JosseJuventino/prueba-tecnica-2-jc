@@ -11,7 +11,8 @@
 
 ```bash
 git clone https://github.com/JosseJuventino/prueba-tecnica-2-jc.git
-cd prueba
+cd prueba-tecnica-2-jc
+cd carrito-compras
 ```
 
 
